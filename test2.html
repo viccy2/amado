@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Details Page</title>
+</head>
+<body>
+    <h1>Product Details</h1>
+    <div>
+        <h2 id="productName"></h2>
+        <img id="productImage" src="" alt="Product Image">
+        <p id="productPrice"></p>
+    </div>
+
+    <script>
+        // Get the parameters from the URL
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name');
+        const image = params.get('image');
+        const price = params.get('price');
+
+        // Set the product details on the page
+        document.getElementById('productName').innerText = name;
+        document.getElementById('productImage').src = decodeURIComponent(image);
+        document.getElementById('productPrice').innerText = `Price: $${price}`;
+    </script>
+</body>
+</html>
+
+</body>
+</html>
